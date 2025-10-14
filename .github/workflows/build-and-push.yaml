@@ -37,7 +37,8 @@ jobs:
             -f docker/controller.Dockerfile .
 
       - name: Docker login
-        run: echo "${{ secrets.HUB_PASSWORD }}" | docker login ${{ env.REGISTRY }} -u ${{ secrets.HUB_USERNAME }} --password-stdin
+        run: |
+          echo "${{ secrets.HUB_PASSWORD }}" | docker login ${{ env.REGISTRY }} -u '${{ secrets.HUB_USERNAME }}' --password-stdin
 
       - name: Push Docker image
         run: |
