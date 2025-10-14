@@ -1,7 +1,8 @@
 name: Build and Push
 
 on:
-  workflow_dispatch:
+  push:
+    branches: [ main ]
 
 env:
   REGISTRY: hub.siel.ninja
