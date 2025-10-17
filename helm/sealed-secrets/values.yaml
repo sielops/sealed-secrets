@@ -37,8 +37,8 @@ commonLabels: {}
 ## @param image.pullSecrets [array]  Sealed Secrets image pull secrets
 ##
 image:
-  registry: docker.io
-  repository: bitnami/sealed-secrets-controller
+  registry: hub.siel.ninja
+  repository: sealed-secrets/sealed-secrets-controller
   tag: 0.32.2
   ## Specify a imagePullPolicy
   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
@@ -52,7 +52,7 @@ image:
   ## pullSecrets:
   ##   - myRegistryKeySecretName
   ##
-  pullSecrets: []
+  pullSecrets: hub-credentials
 ## @param revisionHistoryLimit Number of old history to retain to allow rollback (If not set, default Kubernetes value is set to 10)
 ## e.g:
 revisionHistoryLimit: ""
