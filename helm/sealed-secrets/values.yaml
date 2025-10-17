@@ -52,7 +52,8 @@ image:
   ## pullSecrets:
   ##   - myRegistryKeySecretName
   ##
-  pullSecrets: hub-credentials
+  pullSecrets:
+    - hub-credentials
 ## @param revisionHistoryLimit Number of old history to retain to allow rollback (If not set, default Kubernetes value is set to 10)
 ## e.g:
 revisionHistoryLimit: ""
